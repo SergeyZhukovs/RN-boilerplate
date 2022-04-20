@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "sveriges-elevkarer-app",
+    "slug": "sveriges-elevkarer-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "sveriges-elevkarer-app"
+}
