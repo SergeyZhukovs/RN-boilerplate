@@ -1,0 +1,18 @@
+export default {
+  name: "",
+  surname: "",
+  businessName: "",
+  phone: "",
+  logo: "",
+  agree: false,
+  email: "",
+  repeatEmail: "",
+  password: "",
+  repeatPassword: "",
+  newPassword: "",
+  repeatNewPassword: "",
+  rememberMe: false,
+  ads: [], 
+  created: '',
+  credit: 0,
+};

@@ -1,0 +1,1 @@
+export type ValueType = string | { id: number; name: string };

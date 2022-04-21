@@ -1,0 +1,2 @@
+export const CHANGE_FORM_DATA = 'CHANGE_FORM_DATA';
+export const REMOVE_AD_DATA = 'REMOVE_AD_DATA';
