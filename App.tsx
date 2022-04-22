@@ -2,6 +2,9 @@ import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { navigationRef } from "./src/services/RootNav";
 import MainNavigator from "./src/navigation";
+import CustomButton from "./src/components/Global/CustomButton";
+import { COLORS, TEXTS } from "./src/constants/";
+import { buttons } from "./src/styles/"
 
 export type Props = {
   name: string;
@@ -19,6 +22,10 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
 
   const getExclamationMarks = (numChars: number) =>
     numChars > 0 ? Array(numChars + 1).join("!") : "";
+
+    const onPress = () => {
+      console.log('clicked')
+    }
 
   return (
     <View style={styles.container}>
@@ -39,9 +46,10 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
           onPress={onDecrement}
           color="red"
         />
+        <CustomButton text={TEXTS.BUTTONS.SIGN_UP} backgroundColor={COLORS.PINK} styles={buttons.primaryBtn} onPress={onPress}/>
         <MainNavigator navigationRef={navigationRef} />
       </View>
-    </View>
+    </View> 
   );
 };
 
@@ -52,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   greeting: {
-    fontSize: 20,
+    fontSize: 20,  
     fontWeight: "bold",
     margin: 16,
   },

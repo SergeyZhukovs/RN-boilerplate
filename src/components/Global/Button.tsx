@@ -7,8 +7,8 @@ import {
 } from "react-native";
 
 import CustomText from "./CustomText";
-import { common } from "@styles";
-import { COLORS } from "@constants/";
+import { common } from "../../styles";
+import { COLORS } from "../../constants";
 
 import IconRegular from "@components/Global/IconRegular";
 interface BtnProps {

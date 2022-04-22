@@ -35,6 +35,7 @@ export default {
       MESSAGE_SUB_TEXT: "Bibendum tempor adipiscing nunc, nunc. Diam pellentesque risus aliquet non nisl aliquam vitae. At aliquam turpis eu sit ipsum non.",
       SUCCESS: "Tack för din kontoansökan",
       SUCCESS_SUB_TEXT: "Så fort din ansökan är godkänd får du ett mail lorem ipsum dolor sit amet viverra.",
+    }
   },
 
   BUTTONS: {
@@ -77,5 +78,5 @@ export default {
   TAGS: {
     REGIONAL: "Regional",
     NATIONAL: "Nationell",
-  }
-};
+  },
+}
