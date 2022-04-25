@@ -2,6 +2,9 @@ import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { navigationRef } from "./src/services/RootNav";
 import MainNavigator from "./src/navigation";
+import CustomButton from "./src/components/Global/CustomButton";
+import { COLORS, TEXTS } from "./src/constants";
+import { buttons } from "./src/styles";
 
 export type Props = {
   name: string;
@@ -38,6 +41,21 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
           accessibilityLabel="decrement"
           onPress={onDecrement}
           color="red"
+        />
+        <CustomButton 
+          styles={buttons.primaryBtn}
+          text={TEXTS.BUTTONS.CREATE_ACC} 
+          backgroundColor={COLORS.PINK} 
+          textColor={COLORS.WHITE} 
+          onPress={() => console.log("Clicked")}
+        />
+        <CustomButton 
+          styles={buttons.secondaryBtn}
+          text={TEXTS.BUTTONS.CREATE_ACC} 
+          backgroundColor={COLORS.TRANSPARENT} 
+          textColor={COLORS.BLUE} 
+          borderColor={COLORS.BLUE}
+          onPress={() => console.log("Clicked")}
         />
         <MainNavigator navigationRef={navigationRef} />
       </View>

@@ -4,20 +4,20 @@ export default {
   BLACK: '#000000',
   PINK: '#DA6CA2',
   BLUE: '#65C2CC',
-  GREY: '#929292',
+  DARK_GREY: '#929292',
   GREEN: '#B9C300',
   TRANSPARENT: 'transparent',
-
+  RED: '#DB2B55',
+  
   //background colors
-  LIGHT_GREY: '#E5E5E5',
-  MEDIUM_GREY: '#F6F6F6',
-  DARK_GREY: '#EEEEEE',
+  LIGHT_GREY: '#EEEEEE',
+  MEDIUM_GREY: '#DEDEDE',
   MEDIUM_BLUE: '#BCE3EE',
-  LIGHT_GREEN: '#E1E9AE',
   LIGHT_PINK: '#EFC5DE',
   YELLOW: '#FFED7B',
   ORANGE: '#EF813C',
 
   //menu icon colors
   LIGHT_BLUE: '#BCE3EE',
+  LIGHT_GREEN: '#E1E9AE',
 };

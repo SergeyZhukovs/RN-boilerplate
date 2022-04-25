@@ -41,31 +41,48 @@ export default {
   BUTTONS: {
     CREATE_ACC: "Skapa konto",
     LOG_IN: "Logga in",
+    LOGOUT: "Logga ut",
     SEND: "Skicka",
     SAVE_PASS: "Spara lösenord",
     CONTINUE: "Fortsätt",
     ALL_POSTS: "Alla inlägg",
     MY_EVENTS: "Mina event", 
-    LIKE: "Gilla",
     VOTE: "Rösta",
     SIGN_UP: "Anmäl till event",
     CANCEL: "Avboka",
     ADMIN: "Admin",
     READ_MORE: "Läs mer om eventet",
+    CONTACT_UNION: 'Kontakta kåren',
+    TAKE_PHOTO: "Ta foto",
+    CHOOSE_PHOTO: "Välj ur bildbibliotek",
+    MESSAGES: "Meddelanden",
+    COMMON_QUESTIONS: "Vanliga frågor",
   },
 
   PLACEHOLDERS: {
     EMAIL: "E-postadress",
     PASSWORD: "Lösenord",
     REPEAT_PASS: "Upprepa lösenord",
+    CURRENT_PASS: "Nuvarande lösenord",
+    NEW_PASS: "Nytt lösenord",
     RECRUITMENT_CODE: "Värvningskod",
     PROGRAM: "Program",
     GRADE: "Årskurs",
     CLASS: "Klass",
     NAME: "Namn",
     PLACE: "Ort",
+    POPULATED_PLACE: "Folkbokförd ort",
     PHONE_NR: "Telefonnummer",
     GENDER: "Kön",
+    SEARCH: "Sök..."
+  },
+
+  LABELS: {
+    ANONYMOUS_ACC: "Anonymt konto",
+    CHANGE_PASS: "Ändra lösenord",
+    ACC_INFO: "Kontouppgifter",
+    CLOSE_ACC: "Avsluta konto",
+    PRIVACY_POLICY: "Integritetspolicy",
   },
 
   POST_FEEDS: {
@@ -78,5 +95,60 @@ export default {
   TAGS: {
     REGIONAL: "Regional",
     NATIONAL: "Nationell",
+  },
+
+  EVENT_CARDS: {
+    PUBLISHED: "Publicerat",
+    REGISTERED: "Anmäld",
+    LIKE: "Gilla",
+  },
+
+  SEARCH_SCREEN: {
+    HEADER: "Sök bland inlägg",
+    ERROR_MSG: "Vi hittade tyvärr inget resultat för “Loremipsum”. Kontrollera din stavning och försök igen."
+  },
+
+  MY_UNION: {
+    INFO_TEXT: "Faucibus tellus odio quis tincidunt mollis tellus. Turpis tristique aliquet in mattis purus, fusce nec. Et aliquam sit lorem egestas viverra tempus lorem amet sit odio.",
+    CONTACT_INFO: "Kontaktuppgifter",
+    PRESIDENT: "President",
+    ADMIN_MANAGER: "Administrativ chef",
+    CASHIER: "Kassör",
+    FOOTER: "Kungsholmens gymnasiums elevkår är en del av Sveriges Elevkårer. Sveriges Elevkårer är Sveriges största ungdomsorganisation med medlemmar på gymnasieskolor över hela landet. Vår främsta uppgift är att göra det möjligt för elever att forma föreningar – elevkårer – på sina skolor och att stötta deras arbete för att göra skolan roligare, tryggare och starkare.",
+    URL: "www.sverigeselevkarer.se"
+  },
+
+  MY_PROFILE: {
+    CHANGE_PHOTO: "Byt profilbild",
+    LIBRARY: "Bibliotek",
+    DONE: "Klart",
+    CANCEL: "Avbryt",
+    LATEST: "Senaste",
+
+    SETTINGS: {
+      HEADER: "Kontoinställningar",
+      CLOSE_ACC_INFOTEXT: "Kort infotext om att medlemskapet avslutas automatiskt 31 dec, om medlemmen vill avsluta tidigare måste det ske i Umbraco och e-bas.",
+      CONTACT_INFO_TEXT: "Kort infotext om att man måste kontakta kåren för att ändra kontouppgifter."
+    },
+
+    MESSAGES: {
+      BLOCKED_ACC: "Du har blivit blockerad från att skicka meddelande",
+      INFO_TEXT: "Aliquam imperdiet lacus mi pulvinar. In eget pretium tortor, ullamcorper mauris amet.",
+    }
+  },
+
+  FAQ_SCREEN: {
+    HEADER: "Vanliga frågor",
+    INFO_TEXT: "Nulla quam leo, sed sit eu pulvinar nibh. Sollicitudin non magna faucibus vulputate tristique ultrices.",
+  },
+
+  MEMBERS_CARD: {
+    CARD_NO: "Kortnr",
+    VERIFIED_BY: "Verifierat av",
+  },
+
+  PRIVACY_POLICY: {
+    HEADER: "INTEGRITETSPOLICY",
+    INFO_TEXT: "Tortor sollicitudin venenatis tellus sit justo, elit ac nisl sed. Turpis potenti sollicitudin vel adipiscing pharetra, est. Nisi, a nibh nullam ut purus, quam scelerisque amet nisl. Etiam viverra tempor laoreet risus vitae vitae sed. Blandit ipsum pharetra ultrices fermentum sit.",
   },
 }
