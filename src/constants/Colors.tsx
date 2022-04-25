@@ -6,6 +6,7 @@ export default {
   BLUE: '#65C2CC',
   GREY: '#929292',
   GREEN: '#B9C300',
+  TRANSPARENT: 'transparent',
 
   //background colors
   LIGHT_GREY: '#E5E5E5',

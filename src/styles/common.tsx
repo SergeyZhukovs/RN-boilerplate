@@ -45,8 +45,7 @@ export default StyleSheet.create<Style>({
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
-    width: 315,
-    height: 50,
+    marginTop: 15,
   },
   boxShadow: {
     shadowColor: COLORS.SHADOW,
