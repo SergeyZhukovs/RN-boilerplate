@@ -1,6 +1,6 @@
 import React from "react";
 import { Text as RNText, TextStyle, View } from "react-native";
-import { COLORS, SIZES, FONTS } from "@constants";
+import { COLORS, SIZES, FONTS } from "../../constants";
 import { TFunctionResult } from "i18next";
 
 interface TextProps {
