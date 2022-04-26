@@ -2,6 +2,8 @@ import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { navigationRef } from "./src/services/RootNav";
 import MainNavigator from "./src/navigation";
+import { COLORS, TEXTS } from "./src/constants";
+import CustomInput from "./src/components/Global/CustomInput";
 
 export type Props = {
   name: string;
@@ -39,6 +41,19 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
           onPress={onDecrement}
           color="red"
         />
+        <CustomInput
+          // value={values.email}
+          // label={TEXTS.LABELS.EMAIL}
+          placeholder={TEXTS.PLACEHOLDERS.EMAIL}
+          color={COLORS.BLACK}
+          borderColor={COLORS.BLACK}
+          // onChange={(setFieldValue)}
+          type={"email"}
+          //error={errors.email}
+          //  touched={touched.email}
+          // editable={false}
+        />
+
         <MainNavigator navigationRef={navigationRef} />
       </View>
     </View>

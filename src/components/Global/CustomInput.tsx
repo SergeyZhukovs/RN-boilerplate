@@ -1,21 +1,19 @@
-import React, { useEffect, useState, useRef, FunctionComponent } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   TextInput,
   View,
-  TouchableOpacity,
   Platform,
-  TextInputProps,
 } from "react-native";
-
-import { COLORS } from "../../constants";
-
+import { COLORS, FONTS } from "../../constants";
 import { common, input } from "../../styles";
 import CustomText from "./CustomText";
 
 interface Input {
-  value: string;
+  value?: string;
   label?: string;
-  onChange: (x: string, y: string) => void;
+  color?: string;
+  borderColor?: string,
+  onChange?: (x: string, y: string) => void;
   placeholder?: string;
   secureTextEntry?: boolean;
   autoCorrect?: boolean;
@@ -52,6 +50,8 @@ const CustomInput = ({
   label,
   onChange,
   placeholder,
+  color,
+  borderColor,
   secureTextEntry = false,
   autoCorrect = true,
   autoCapitalize = "none",
@@ -85,7 +85,7 @@ const CustomInput = ({
       {!!label && (
         <CustomText
           text={label}
-          font={"TAJAWAL_BOLD"}
+          font={FONTS.DUBAI_MEDIUM}
           size={"M"}
           styles={[input.label, !editable && { opacity: 0.3 }]}
         />
@@ -95,7 +95,7 @@ const CustomInput = ({
           text={placeholder}
           font={!isFocused ? "TAJAWAL_REGULAR" : "DUBAI_LIGHT"}
           size={!isFocused ? "M" : "S"}
-          color={COLORS.BLACK}
+          color={color}
           styles={[
             input.floatLabel,
             {
@@ -114,6 +114,7 @@ const CustomInput = ({
       )}
       <TextInput
         ref={inputEl}
+        borderColor={borderColor}
         style={[
           common.input,
           !placeholder && { paddingTop: 4 },

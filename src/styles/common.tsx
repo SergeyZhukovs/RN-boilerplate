@@ -5,7 +5,7 @@ import {
   ViewStyle,
   I18nManager,
 } from "react-native";
-import { COLORS } from "@constants";
+import { COLORS, FONTS } from "../../src/constants";
 interface Style {
   main: ViewStyle;
   button: ViewStyle;
@@ -56,15 +56,15 @@ export default StyleSheet.create<Style>({
   },
   input: {
     position: "relative",
-    height: 60,
-    backgroundColor: COLORS.WHITE,
-    borderRadius: 6,
-    borderColor: COLORS.INPUT_BORDER,
-    borderWidth: 1,
-    paddingHorizontal: 25,
-    paddingTop: 15,
+    height: 50,
+    width: 315,
+    backgroundColor: "transparent",
+    borderRadius: 5,
+    borderWidth: 2,
+    paddingHorizontal: 20,
+    paddingTop: 14,
     fontSize: 16,
-    fontFamily: "Tajawal-Regular",
+    fontFamily: FONTS.DUBAI_MEDIUM,
   },
   checkbox: {
     alignItems: 'center',

@@ -18,13 +18,13 @@ export default StyleSheet.create<Style>({
   },
   label: {
     position: "absolute",
-    top: -25,
+    //top: -25,
     zIndex: 1,
-    marginBottom: 10,
+    //marginBottom: 10,
   },
   floatLabel: {
     position: "absolute",
-    zIndex: 1,
+    zIndex: 3,
     left: 25,
   },
   disabled: {
@@ -54,6 +54,6 @@ export default StyleSheet.create<Style>({
     justifyContent: 'center',
     backgroundColor: 'white',
     borderWidth: 0.5, 
-    borderColor: COLORS.INPUT_BORDER
+    borderColor: COLORS.BLACK
   },
 });
