@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { View, TouchableOpacity, Text, ViewStyle } from "react-native";
-import { COLORS } from "../../constants";
-import { common } from "../../styles";
+import { COLORS } from "@constants";
+import { common } from "@styles";
 
 interface BtnProps {
   text: string;
