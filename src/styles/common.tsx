@@ -5,7 +5,7 @@ import {
   ViewStyle,
   I18nManager,
 } from "react-native";
-import { COLORS } from "../constants";
+import { COLORS, FONTS } from "@constants";
 interface Style {
   main: ViewStyle;
   button: ViewStyle;

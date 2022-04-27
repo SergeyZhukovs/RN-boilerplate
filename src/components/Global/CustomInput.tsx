@@ -93,15 +93,12 @@ const CustomInput = ({
       {!!placeholder && (
         <CustomText
           text={placeholder}
-          // font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
+          //font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
           font={FONTS.DUBAI_MEDIUM}
-          size={!isFocused ? "M" : "S"}
+          size={!isFocused ? "M" : "S1"}
           color={color}
           styles={[
             input.floatLabel,
-            // {
-            //   transform: [{ translateY: -21 }]
-            // },
             {
               top: !isFocused
                 ? Platform.OS === "ios"
