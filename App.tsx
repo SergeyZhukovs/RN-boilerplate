@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { navigationRef } from "./src/services/RootNav";
-import MainNavigator from "./src/navigation";
-import { COLORS, TEXTS } from "./src/constants";
-import CustomInput from "./src/components/Global/CustomInput";
+import { navigationRef } from "@services/RootNav";
+import MainNavigator from "@navigation";
+import { COLORS, TEXTS } from "@constants";
+import CustomInput from "@components/Global/CustomInput";
 
 export type Props = {
   name: string;

@@ -93,7 +93,7 @@ const CustomInput = ({
       {!!placeholder && (
         <CustomText
           text={placeholder}
-          font={!isFocused ? "TAJAWAL_REGULAR" : "DUBAI_LIGHT"}
+          font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
           size={!isFocused ? "M" : "S"}
           color={color}
           styles={[
