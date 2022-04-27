@@ -4,8 +4,8 @@ import {
   View,
   Platform,
 } from "react-native";
-import { COLORS, FONTS } from "../../constants";
-import { common, input } from "../../styles";
+import { COLORS, FONTS } from "@constants";
+import { common, input } from "@styles";
 import CustomText from "./CustomText";
 
 interface Input {
@@ -93,11 +93,15 @@ const CustomInput = ({
       {!!placeholder && (
         <CustomText
           text={placeholder}
-          font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
+          // font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
+          font={FONTS.DUBAI_MEDIUM}
           size={!isFocused ? "M" : "S"}
           color={color}
           styles={[
             input.floatLabel,
+            // {
+            //   transform: [{ translateY: -21 }]
+            // },
             {
               top: !isFocused
                 ? Platform.OS === "ios"

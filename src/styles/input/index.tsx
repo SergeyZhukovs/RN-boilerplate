@@ -1,5 +1,5 @@
 import { StyleSheet, TextStyle, ViewStyle } from "react-native";
-import { COLORS } from "../../constants";
+import { COLORS } from "@constants";
 
 interface Style {
   container: ViewStyle;
@@ -24,7 +24,8 @@ export default StyleSheet.create<Style>({
   },
   floatLabel: {
     position: "absolute",
-    zIndex: 3,
+    zIndex: 1,
+    top: 6,
     left: 25,
   },
   disabled: {

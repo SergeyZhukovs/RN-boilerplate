@@ -44,7 +44,7 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
         <CustomInput
           // value={values.email}
           // label={TEXTS.LABELS.EMAIL}
-          placeholder={TEXTS.PLACEHOLDERS.EMAIL}
+          placeholder={TEXTS.LABELS.EMAIL}
           color={COLORS.BLACK}
           borderColor={COLORS.BLACK}
           // onChange={(setFieldValue)}
