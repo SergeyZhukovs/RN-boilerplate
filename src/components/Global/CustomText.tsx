@@ -28,7 +28,7 @@ const CustomText = ({
   size = "S",
   children,
   styles,
-  font = FONTS.DUBAI_MEDIUM,
+  font = "DUBAI_MEDIUM",
   color,
   text,
     center,
@@ -43,7 +43,6 @@ const CustomText = ({
               fontFamily: checkFonts(font),
               color: color || COLORS.BLACK,
               alignItems: 'center',
-
             },
             center && {textAlign: 'center'},
             styles,

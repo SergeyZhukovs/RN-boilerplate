@@ -85,7 +85,6 @@ const CustomInput = ({
       {!!label && (
         <CustomText
           text={label}
-          font={FONTS.DUBAI_MEDIUM}
           size={"M"}
           styles={[input.label, !editable && { opacity: 0.3 }]}
         />
@@ -94,7 +93,7 @@ const CustomInput = ({
         <CustomText
           text={placeholder}
           //font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
-          font={FONTS.DUBAI_MEDIUM}
+          // font={FONTS.DUBAI_MEDIUM}
           size={!isFocused ? "M" : "S1"}
           color={color}
           styles={[
