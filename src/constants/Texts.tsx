@@ -1,158 +1,154 @@
 export default {
-  HOME_PAGE_TITLE: "Welcome, what are you looking for today?",
-  REGISTER_PAGE_TITLE:
-    "To use this feature, you need to have an account. Log in with Facebook, Apple ID or create an account with your email address. Choose “register as a business” if you’re using the app for your company. ",
-  //categories
-  CATEGORIES: {
-    VEHICLE: "Vehicle",
-    ACCOMMODATION: "Accommodation",
-    ELECTRONICS: "Electronics",
-    SAVED: "Saved",
-    OTHER: "Other",
-    ALL: "All ads",
+  HOMEPAGE: {
+    TITLE: "Välkommen till Sveriges elevkårers app för medlemmar",
+    SUB_TEXT: "Commodo auctor arcu rhoncus donec sed vitae, vestibulum. Aliquet tristique a eu tortor mi sit volutpat ut. Ullamcorper tempus dictum augue eu, duis faucibus praesent.",
+    MESSAGE: "Från 1 januari krävs nytt medlemskap",
+    SUB_MESSAGE: "Bibendum tempor adipiscing nunc, nunc. Diam pellentesque risus aliquet non nisl ali.",
   },
-  UPLOAD_IMAGE_TITLE: "Choose option for uploading",
-  UPLOAD_FROM_GALLERY: "Upload from gallery",
-  UPLOAD_VIDEO: "Upload video from gallery",
-  ADD_PHOTOS: "Add Photos",
-  UPLOAD_FROM_CAMERA: "Take a new photo",
-  CANCEL: 'Cancel',
-  LOGO_NAME: "",
-  PROFILE: {
-    HEADER: "Profile",
-    MEMBER: "Member since",
-    FREE_ADS: " You have 5 free ads",
-    PHONE: " Phone",
-    EMAIL: " Email",
-    EDIT_PROFILE: "Edit your profile",
-    ACCOUNT_DETAILS: "Account details",
-    SETTINGS: "Settings",
-    ACCOUNT_MANAGE: "Account management",
-    SIGN_OUT: " Sign out",
-    DELETE_ACCOUNT: " Delete account",
-    READ_TERMS: "Read tearms and conditions",
+  
+  LOGIN_SCREEN: {
+    HEADER: "Logga in",
+    NEW_MEMBER: "Ny medlem?",
+    FORGOT_PASS: {
+      HEADER: "Glömt lösenord?",
+      SUB_TEXT: "Sagittis enim et ultrices elementum augue sed nunc lorem mattis ut vestibulum tempor.",
+      NEW_PASS_HEADER: "Välj nytt lösenord",
+      SUCCESS_MESSAGE: {
+        TEXT: "Vi har skickat ett mail",
+        SUB_TEXT: "Bibendum tempor adipiscing nunc, nunc. Diam pellentesque risus aliquet non nisl aliquam vitae. At aliquam turpis eu sit ipsum non.",
+      },
+      FAILED_MESSAGE: {
+        TEXT: "Din e-postadress finns inte med i vårt system",
+        SUB_TEXT: "Bibendum tempor adipiscing nunc, nunc. Diam pellentesque risus aliquet non nisl aliquam vitae. At aliquam turpis eu sit ipsum non.",
+      }
+    },
   },
+
+  REGISTER_SCREEN: {
+    HEADER: "Skapa konto",
+    SUB_HEADER: "- Ange namn, ort, kön och lösenord",
+    SUB_TEXT: "Sagittis enim et ultrices elementum augue sed nunc lorem mattis ut vestibulum tempor.",
+    ALREADY_MEMBER: "Har du redan ett konto?",
+    APPROVE: "Jag godkänner att mina uppgifter sparas enligt Sveriges Elevkårers integritetspolicy",
+    MESSAGES: {
+      TEXT: "Du har redan ett konto",
+      MESSAGE_SUB_TEXT: "Bibendum tempor adipiscing nunc, nunc. Diam pellentesque risus aliquet non nisl aliquam vitae. At aliquam turpis eu sit ipsum non.",
+      SUCCESS: "Tack för din kontoansökan",
+      SUCCESS_SUB_TEXT: "Så fort din ansökan är godkänd får du ett mail lorem ipsum dolor sit amet viverra.",
+    }
+  },
+
   BUTTONS: {
-    SEE_ALL: "See all ads ",
-    CONTINUE: "Continue",
-    SAVE_CREATE: "Save and create profile",
-    SAVE_UPDATE: "Save and update",
-    CREATE_NEW_AD: "Create new ad",
-    LOG_IN: "Log in",
-    CONTACT_SELLER: "Contact seller and buy",
-    SHOW_ALL: "Show Ads",
-    CLEAR: "Clear",
-    PUBLISH: "Pay and Publish",
-    PREVIEW: "Preview",
-    EDIT_AD: "Edit ad",
+    CREATE_ACC: "Skapa konto",
+    LOG_IN: "Logga in",
+    LOGOUT: "Logga ut",
+    SEND: "Skicka",
+    SAVE_PASS: "Spara lösenord",
+    CONTINUE: "Fortsätt",
+    ALL_POSTS: "Alla inlägg",
+    MY_EVENTS: "Mina event", 
+    VOTE: "Rösta",
+    SIGN_UP: "Anmäl till event",
+    CANCEL: "Avboka",
+    ADMIN: "Admin",
+    READ_MORE: "Läs mer om eventet",
+    CONTACT_UNION: 'Kontakta kåren',
+    TAKE_PHOTO: "Ta foto",
+    CHOOSE_PHOTO: "Välj ur bildbibliotek",
+    MESSAGES: "Meddelanden",
+    COMMON_QUESTIONS: "Vanliga frågor",
   },
-  REGISTER: {
-    TITLE: "Register with Email",
-    REMEMBER_ME: "Remember me on this device",
-    AGREE: "I agree on ",
-    TERMS: "terms and conditions",
-    FACEBOOK: "Log in with Facebook",
-    APPLE_ID: "Log in with Apple ID",
-    WITH_EMAIL: "Register with email",
-    BUSINESS: "Register as a business",
-    LOG_IN: "Log in with email",
-  },
-  FORM: {
-    UPLOAD_TITLE: "Upload your company logo",
-    FORMAT: "recommended format....",
-    UPLOAD_LOGO: "Upload logo",
-    MAX_SIZE: "Maximum file size 2 MB.",
-    INSERT_IMAGE: "Maximum file size 2 MB.",
-  },
-  LABELS: {
-    EMAIL: "Email",
-    PASSWORD: "Password",
-    NEW_PASSWORD: "New password",
-    NAME: "Name",
-    BUSINESS_NAME: "Business name",
-    PHONE: "Phone",
-    LOGO: "Upload your company logo",
-  },
+
   PLACEHOLDERS: {
-    EMAIL: "Enter your email adress",
-    REPEAT_EMAIL: "Repeat email adress",
-    PASSWORD: "Enter your password",
-    NEW_PASSWORD: "Enter new password",
-    REPEAT_NEW_PASSSWORD: "Repeat new password",
-    REPEAT_PASSSWORD: "Repeat password",
-    NAME: "Enter your name",
-    SURNAME: "Enter your Surname",
-    BUSINESS_NAME: "Name of your company",
-    PHONE: "Enter your phone number",
-    SEARCH: "Search",
-    CATEGORY: "Category",
-    SUB_CATEGORY: "Sub Category",
-    AD_TITLE: "Title",
-    AD_YOUTUBE: "Please insert youube link",
-    AD_PRICE: "Price",
-    AD_DESCRIPTION: "Description",
-    AD_NAME: "Name",
-    AD_PHONE: "Phone",
-    AD_MILEAGE: "Mileage",
-    AD_CITY: "City",
+    EMAIL: "E-postadress",
+    PASSWORD: "Lösenord",
+    REPEAT_PASS: "Upprepa lösenord",
+    CURRENT_PASS: "Nuvarande lösenord",
+    NEW_PASS: "Nytt lösenord",
+    RECRUITMENT_CODE: "Värvningskod",
+    PROGRAM: "Program",
+    GRADE: "Årskurs",
+    CLASS: "Klass",
+    NAME: "Namn",
+    PLACE: "Ort",
+    POPULATED_PLACE: "Folkbokförd ort",
+    PHONE_NR: "Telefonnummer",
+    GENDER: "Kön",
+    SEARCH: "Sök..."
   },
-  MODAL: {
-    SUCCESS_TITLE: "Sucess headline",
-    ERROR_TITLE: "No sucess headline",
-    SUCCESS_TEXT:
-      "Tellus, id lacinia risus dis porttitor tristique in. Libero, odio eget mi neque. Lobortis porttitor.",
-    ERROR_TEXT:
-      "Tellus, id lacinia risus dis porttitor tristique in. Libero, odio eget mi neque. Lobortis porttitor.",
+
+  LABELS: {
+    ANONYMOUS_ACC: "Anonymt konto",
+    CHANGE_PASS: "Ändra lösenord",
+    ACC_INFO: "Kontouppgifter",
+    CLOSE_ACC: "Avsluta konto",
+    PRIVACY_POLICY: "Integritetspolicy",
   },
-  ADS: {
-    MY: "My Ads",
-    MY_BUSINESS: "Our Ads",
-    SELLER: "More ads",
-    SELLER_BUSINESS: "Business’s ads",
-    LATEST: "Latest",
-    NO_RESULT: "No results to show",
-    NO_RESULT_TEXT:
-      "Try searching for something else, go back to home and choose another category or upload an ad by yourself!",
+
+  POST_FEEDS: {
+    NEWS: "Nyhet",
+    EVENTS: "Event",
+    IMAGE_VIDEO: "Billd/video",
+    POLLS: "Enkät",
   },
-  ADS_PAGE: {
-    CATEGORY: "Category",
-    VEHICLE: {
-      FUEL: "Fuel",
-      GEARBOX: "Gearbox",
-      BRAND: "Brand",
-      MODEL: "Model",
-      MILAGE: "Milage",
-      YEAR: "Model year",
+
+  TAGS: {
+    REGIONAL: "Regional",
+    NATIONAL: "Nationell",
+  },
+
+  EVENT_CARDS: {
+    PUBLISHED: "Publicerat",
+    REGISTERED: "Anmäld",
+    LIKE: "Gilla",
+  },
+
+  SEARCH_SCREEN: {
+    HEADER: "Sök bland inlägg",
+    ERROR_MSG: "Vi hittade tyvärr inget resultat för “Loremipsum”. Kontrollera din stavning och försök igen."
+  },
+
+  MY_UNION: {
+    INFO_TEXT: "Faucibus tellus odio quis tincidunt mollis tellus. Turpis tristique aliquet in mattis purus, fusce nec. Et aliquam sit lorem egestas viverra tempus lorem amet sit odio.",
+    CONTACT_INFO: "Kontaktuppgifter",
+    PRESIDENT: "President",
+    ADMIN_MANAGER: "Administrativ chef",
+    CASHIER: "Kassör",
+    FOOTER: "Kungsholmens gymnasiums elevkår är en del av Sveriges Elevkårer. Sveriges Elevkårer är Sveriges största ungdomsorganisation med medlemmar på gymnasieskolor över hela landet. Vår främsta uppgift är att göra det möjligt för elever att forma föreningar – elevkårer – på sina skolor och att stötta deras arbete för att göra skolan roligare, tryggare och starkare.",
+    URL: "www.sverigeselevkarer.se"
+  },
+
+  MY_PROFILE: {
+    CHANGE_PHOTO: "Byt profilbild",
+    LIBRARY: "Bibliotek",
+    DONE: "Klart",
+    CANCEL: "Avbryt",
+    LATEST: "Senaste",
+
+    SETTINGS: {
+      HEADER: "Kontoinställningar",
+      CLOSE_ACC_INFOTEXT: "Kort infotext om att medlemskapet avslutas automatiskt 31 dec, om medlemmen vill avsluta tidigare måste det ske i Umbraco och e-bas.",
+      CONTACT_INFO_TEXT: "Kort infotext om att man måste kontakta kåren för att ändra kontouppgifter."
     },
-    ACCOMMODATION: {
-      SQUARE_METER: "Square meter",
-      BEDROOMS: "Bedrooms",
-      SALE_RENT: "Sale/Rent",
-      TYPE: "Type",
-    },
-    ELECTRONICS: {},
-    OTHER: {},
-    DESCRIPTION_BY_SELLER: "Description by seller",
-    VIEWS: "Ad views",
+
+    MESSAGES: {
+      BLOCKED_ACC: "Du har blivit blockerad från att skicka meddelande",
+      INFO_TEXT: "Aliquam imperdiet lacus mi pulvinar. In eget pretium tortor, ullamcorper mauris amet.",
+    }
   },
-  FILTERS: {
-    HEADER: "Filter",
-    LATEST: "USE LATEST",
-    LOCATION: "Location",
-    CATEGORY: "Category",
+
+  FAQ_SCREEN: {
+    HEADER: "Vanliga frågor",
+    INFO_TEXT: "Nulla quam leo, sed sit eu pulvinar nibh. Sollicitudin non magna faucibus vulputate tristique ultrices.",
   },
-  CREATE_AD: {
-    HEADER: 'Create ad',
-    THANK_YOU_HEADER: 'Thank you!',
-    THANK_YOU_MESSAGE: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros ultricies eget vestibulum, interdum ' +
-        'hac vitae at. Feugiat imperdiet augue ipsum tincidunt iaculis. Nec, adipiscing id a et ut tristique.',
-    RETURN: 'Go back to homepage',
-    ACCOMMODATION_SQUARE_METER: "Accommodation square meters"
+
+  MEMBERS_CARD: {
+    CARD_NO: "Kortnr",
+    VERIFIED_BY: "Verifierat av",
   },
-  SAVED: {
-    HEADER: 'Saved',
-    ADS: 'ADS',
-    WATCHLIST: 'Watchlist',
-    SAVED_ADS: 'saved ads'
-  }
-};
+
+  PRIVACY_POLICY: {
+    HEADER: "INTEGRITETSPOLICY",
+    INFO_TEXT: "Tortor sollicitudin venenatis tellus sit justo, elit ac nisl sed. Turpis potenti sollicitudin vel adipiscing pharetra, est. Nisi, a nibh nullam ut purus, quam scelerisque amet nisl. Etiam viverra tempor laoreet risus vitae vitae sed. Blandit ipsum pharetra ultrices fermentum sit.",
+  },
+}

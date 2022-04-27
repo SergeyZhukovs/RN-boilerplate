@@ -8,7 +8,7 @@ import {
 
 import CustomText from "./CustomText";
 import { common } from "@styles";
-import { COLORS } from "@constants/";
+import { COLORS } from "@constants";
 
 import IconRegular from "@components/Global/IconRegular";
 interface BtnProps {

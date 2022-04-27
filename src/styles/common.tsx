@@ -5,7 +5,7 @@ import {
   ViewStyle,
   I18nManager,
 } from "react-native";
-import { COLORS, FONTS } from "@constants";
+import { COLORS } from "../constants";
 interface Style {
   main: ViewStyle;
   button: ViewStyle;
@@ -38,11 +38,14 @@ export default StyleSheet.create<Style>({
     backgroundColor: COLORS.LIGHT_SILVER,
   },
   button: {
-    borderRadius: 5,
+    borderRadius: 15,
+    paddingHorizontal: 20,
+    paddingVertical: 14,
     alignItems: "center",
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
+    marginTop: 15,
   },
   boxShadow: {
     shadowColor: COLORS.SHADOW,
