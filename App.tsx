@@ -1,10 +1,9 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { navigationRef } from "./src/services/RootNav";
+import { navigationRef } from "@services/RootNav";
 import MainNavigator from "@navigation";
-import CustomButton from "@components/Global/CustomButton";
 import { COLORS, TEXTS } from "@constants";
-import { buttons } from "./src/styles";
+import CustomInput from "@components/Global/CustomInput";
 
 export type Props = {
   name: string;
@@ -42,21 +41,19 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
           onPress={onDecrement}
           color="red"
         />
-        <CustomButton
-          styles={buttons.primaryBtn}
-          text={TEXTS.BUTTONS.CREATE_ACC}
-          backgroundColor={COLORS.PINK}
-          textColor={COLORS.WHITE}
-          onPress={() => console.log("Clicked")}
+        <CustomInput
+          // value={values.email}
+          // label={TEXTS.LABELS.EMAIL}
+          placeholder={TEXTS.PLACEHOLDERS.EMAIL}
+          color={COLORS.BLACK}
+          borderColor={COLORS.BLACK}
+          // onChange={(setFieldValue)}
+          type={"email"}
+          //error={errors.email}
+          //  touched={touched.email}
+          // editable={false}
         />
-        <CustomButton
-          styles={buttons.secondaryBtn}
-          text={TEXTS.BUTTONS.CREATE_ACC}
-          backgroundColor={COLORS.TRANSPARENT}
-          textColor={COLORS.BLUE}
-          borderColor={COLORS.BLUE}
-          onPress={() => console.log("Clicked")}
-        />
+
         <MainNavigator navigationRef={navigationRef} />
       </View>
     </View>
