@@ -4,7 +4,7 @@ import {
   View,
   Platform,
 } from "react-native";
-import { COLORS, FONTS } from "@constants";
+import { COLORS } from "@constants";
 import { common, input } from "@styles";
 import CustomText from "./CustomText";
 
@@ -85,8 +85,8 @@ const CustomInput = ({
       {!!label && (
         <CustomText
           text={label}
-          font={FONTS.DUBAI_MEDIUM}
-          size={"M"}
+          font={"DUBAI_MEDIUM"}
+          size={"H3"}
           styles={[input.label, !editable && { opacity: 0.3 }]}
         />
       )}
@@ -94,8 +94,8 @@ const CustomInput = ({
         <CustomText
           text={placeholder}
           //font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
-          font={FONTS.DUBAI_MEDIUM}
-          size={!isFocused ? "M" : "S1"}
+          font={"DUBAI_MEDIUM"}
+          size={!isFocused ? "P" : "S1"}
           color={color}
           styles={[
             input.floatLabel,
@@ -120,7 +120,7 @@ const CustomInput = ({
           common.input,
           !placeholder && { paddingTop: 4 },
           multiline && {
-            height: 150,
+            height: 160,
             paddingTop: Platform.OS === "ios" ? 30 : 10,
           },
           error && touched && { borderColor: COLORS.RED },

@@ -54,6 +54,7 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
           //error={errors.email}
           //  touched={touched.email}
           // editable={false}
+          //multiline
         />
 
         <CustomButton

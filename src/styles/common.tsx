@@ -5,7 +5,7 @@ import {
   ViewStyle,
   I18nManager,
 } from "react-native";
-import { COLORS, FONTS } from "@constants";
+import { COLORS, FONTS, SIZES } from "@constants";
 interface Style {
   main: ViewStyle;
   button: ViewStyle;
@@ -65,8 +65,8 @@ export default StyleSheet.create<Style>({
     borderRadius: 5,
     borderWidth: 2,
     paddingHorizontal: 20,
-    paddingTop: 14,
-    fontSize: 16,
+    paddingVertical: 15,
+    fontSize: SIZES.P,
     fontFamily: FONTS.DUBAI_MEDIUM,
   },
   checkbox: {
@@ -76,6 +76,7 @@ export default StyleSheet.create<Style>({
   errorText: {
     paddingTop: 10,
     flexBasis: "100%",
+    fontSize: SIZES.S1,
   },
   dropdownErrorText: {
     paddingTop: 0,

@@ -28,7 +28,7 @@ const CustomText = ({
   size = "S",
   children,
   styles,
-  font = FONTS.DUBAI_MEDIUM,
+  font = "DUBAI_MEDIUM",
   color,
   text,
     center,
