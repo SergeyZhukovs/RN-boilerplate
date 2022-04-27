@@ -1,20 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import {
-  TextInput,
+  //TextInput,
   View,
-  Platform,
 } from "react-native";
 import { COLORS } from "@constants";
 import { common, input } from "@styles";
 import CustomText from "./CustomText";
+import { TextInput } from 'react-native-paper';
 
 interface Input {
   value?: string;
   label?: string;
-  color?: string;
-  borderColor?: string,
   onChange?: (x: string, y: string) => void;
-  placeholder?: string;
   secureTextEntry?: boolean;
   autoCorrect?: boolean;
   autoCapitalize?: "none" | "sentences" | "words" | "characters";
@@ -43,15 +40,17 @@ interface Input {
     | "web-search";
   multiline?: boolean;
   editable?: boolean;
+  selectionColor?: string;
+  activeOutlineColor?: string | undefined;
+  mode?: 'flat' | 'outlined';
+  outlineColor?: string;
 }
 
 const CustomInput = ({
   value,
   label,
   onChange,
-  placeholder,
-  color,
-  borderColor,
+  selectionColor = COLORS.BLACK,
   secureTextEntry = false,
   autoCorrect = true,
   autoCapitalize = "none",
@@ -62,12 +61,15 @@ const CustomInput = ({
   keyboardType,
   editable = true,
   multiline,
+  activeOutlineColor,
+  mode = "outlined",
+  outlineColor,
 }: Input): JSX.Element => {
   const [isFocused, setIsFocued] = useState(false);
   const [hidePassword, setHidePassword] = useState(true);
   let inputEl = useRef(null);
 
-  const handleFocus = () => setIsFocued(true);
+  const handleFocus = () => setIsFocued(true);  
   const handleBlur = () => !value && setIsFocued(false);
 
   const setInputFocused = () => inputEl?.current?.focus();
@@ -82,15 +84,16 @@ const CustomInput = ({
 
   return (
     <View style={input.container}>
-      {!!label && (
+      {/* {!!label && (
         <CustomText
           text={label}
           font={"DUBAI_MEDIUM"}
           size={"H3"}
+          color={color}
           styles={[input.label, !editable && { opacity: 0.3 }]}
         />
-      )}
-      {!!placeholder && (
+      )} */}
+      {/* {!!placeholder && (
         <CustomText
           text={placeholder}
           //font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
@@ -112,8 +115,8 @@ const CustomInput = ({
           ]}
           onPress={setInputFocused}
         />
-      )}
-      <TextInput
+      )} */}
+      {/* <TextInput
         ref={inputEl}
         borderColor={borderColor}
         style={[
@@ -139,6 +142,44 @@ const CustomInput = ({
         touched={touched}
         keyboardType={keyboardType}
         editable={editable}
+      /> */}
+      <TextInput 
+        label={label}
+        ref={inputEl}
+        mode={mode}
+        selectionColor={selectionColor}
+        value={value}
+        onChangeText={(newVal) => onChange(type, newVal)}
+        editable={editable}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        error={error}
+        multiline={multiline}
+        autoCorrect={autoCorrect}
+        clearButtonMode={clearButtonMode}
+        touched={touched}
+        keyboardType={keyboardType}
+        secureTextEntry={secureTextEntry && hidePassword}
+        autoCapitalize={autoCapitalize}
+        activeOutlineColor={activeOutlineColor}
+        outlineColor={outlineColor}
+        
+        // theme={{
+        //   colors: {
+        //         background: 'transparent',
+        //      }
+        // }}
+        style={[ common.input ]}
+        // style={[
+        //   common.input,
+        //   multiline && {
+        //     height: 160,
+        //     paddingTop: Platform.OS === "ios" ? 30 : 10,
+        //   },
+        //   error && touched && { borderColor: COLORS.RED },
+        //   !editable && { opacity: 0.3 },
+        // ]}
+
       />
       {error && touched && (
         <CustomText
