@@ -1,76 +1,27 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
+import { Provider } from "react-redux";
 import { navigationRef } from "@services/RootNav";
 import MainNavigator from "@navigation";
 import { COLORS, TEXTS } from "@constants";
 import CustomInput from "@components/Global/CustomInput";
+import Header from "@components/Header";
+import { setupStore } from "@store/store";
 
 export type Props = {
   name: string;
   baseEnthusiasmLevel?: number;
 };
 
-const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
-  const [enthusiasmLevel, setEnthusiasmLevel] = React.useState(
-    baseEnthusiasmLevel
-  );
+const store = setupStore();
 
-  const onIncrement = () => setEnthusiasmLevel(enthusiasmLevel + 1);
-  const onDecrement = () =>
-    setEnthusiasmLevel(enthusiasmLevel > 0 ? enthusiasmLevel - 1 : 0);
-
-  const getExclamationMarks = (numChars: number) =>
-    numChars > 0 ? Array(numChars + 1).join("!") : "";
+const App = () => {
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.greeting}>
-        Hello {name}
-        {getExclamationMarks(enthusiasmLevel)}
-      </Text>
-      <View>
-        <Button
-          title="Increase enthusiasm"
-          accessibilityLabel="increment"
-          onPress={onIncrement}
-          color="blue"
-        />
-        <Button
-          title="Decrease enthusiasm"
-          accessibilityLabel="decrement"
-          onPress={onDecrement}
-          color="red"
-        />
-        <CustomInput
-          // value={values.email}
-          // label={TEXTS.LABELS.EMAIL}
-          placeholder={TEXTS.PLACEHOLDERS.EMAIL}
-          color={COLORS.BLACK}
-          borderColor={COLORS.BLACK}
-          // onChange={(setFieldValue)}
-          type={"email"}
-          //error={errors.email}
-          //  touched={touched.email}
-          // editable={false}
-        />
-
-        <MainNavigator navigationRef={navigationRef} />
-      </View>
-    </View>
+      <Provider store={store}>
+         <MainNavigator />
+      </Provider>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  greeting: {
-    fontSize: 20,
-    fontWeight: "bold",
-    margin: 16,
-  },
-});
-
-export default Hello;
+export default App;

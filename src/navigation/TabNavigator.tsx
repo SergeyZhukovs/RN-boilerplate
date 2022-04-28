@@ -1,20 +1,20 @@
 import React from "react";
-import { Text } from "react-native";
+import Header from "@components/Header";
 
 import {
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 //store
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = (): JSX.Element => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <Tab.Navigator>
-        <Text>test</Text>
+      <Tab.Screen name="TabHome" component={Header} />
     </Tab.Navigator>
   );
 };

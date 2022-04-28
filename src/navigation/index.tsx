@@ -12,7 +12,7 @@ import SplashScreen from "../screens/SplashScreen/SplashScreen";
 
 const MainNavigator = (): JSX.Element => {
   const Stack = createStackNavigator();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [token, setToken] = useState(true);
 
   const _SplashScreen = () => (
@@ -34,7 +34,9 @@ const MainNavigator = (): JSX.Element => {
           </>
         ) : (
           <>
-            <Stack.Screen name="LogInPage" component={LogInPage} />
+            <Stack.Screen name="Home" options={{
+                headerShown: false
+            }} component={TabNavigator} />
           </>
         )}
       </Stack.Navigator>
