@@ -43,7 +43,6 @@ const CustomText = ({
               fontFamily: checkFonts(font),
               color: color || COLORS.BLACK,
               alignItems: 'center',
-
             },
             center && {textAlign: 'center'},
             styles,
