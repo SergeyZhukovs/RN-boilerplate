@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import {
-  //TextInput,
   View,
 } from "react-native";
 import { COLORS } from "@constants";
@@ -12,7 +11,6 @@ interface Input {
   value?: string;
   label?: string;
   onChange?: (x: string, y: string) => void;
-  secureTextEntry?: boolean;
   autoCorrect?: boolean;
   autoCapitalize?: "none" | "sentences" | "words" | "characters";
   clearButtonMode?:
@@ -39,11 +37,12 @@ interface Input {
     | "twitter"
     | "web-search";
   multiline?: boolean;
-  editable?: boolean;
+  disabled?: boolean;
   selectionColor?: string;
   activeOutlineColor?: string | undefined;
   mode?: 'flat' | 'outlined';
   outlineColor?: string;
+  theme?: string;
 }
 
 const CustomInput = ({
@@ -51,7 +50,6 @@ const CustomInput = ({
   label,
   onChange,
   selectionColor = COLORS.BLACK,
-  secureTextEntry = false,
   autoCorrect = true,
   autoCapitalize = "none",
   clearButtonMode = "while-editing",
@@ -59,22 +57,18 @@ const CustomInput = ({
   error,
   touched,
   keyboardType,
-  editable = true,
+  disabled = false,
   multiline,
   activeOutlineColor,
   mode = "outlined",
   outlineColor,
+  theme,
 }: Input): JSX.Element => {
   const [isFocused, setIsFocued] = useState(false);
-  const [hidePassword, setHidePassword] = useState(true);
   let inputEl = useRef(null);
 
   const handleFocus = () => setIsFocued(true);  
   const handleBlur = () => !value && setIsFocued(false);
-
-  const setInputFocused = () => inputEl?.current?.focus();
-
-  const changePwdType = () => setHidePassword(!hidePassword);
 
   useEffect(() => {
     if (value) {
@@ -84,73 +78,12 @@ const CustomInput = ({
 
   return (
     <View style={input.container}>
-      {/* {!!label && (
-        <CustomText
-          text={label}
-          font={"DUBAI_MEDIUM"}
-          size={"H3"}
-          color={color}
-          styles={[input.label, !editable && { opacity: 0.3 }]}
-        />
-      )} */}
-      {/* {!!placeholder && (
-        <CustomText
-          text={placeholder}
-          //font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
-          font={"DUBAI_MEDIUM"}
-          size={!isFocused ? "P" : "S1"}
-          color={color}
-          styles={[
-            input.floatLabel,
-            {
-              top: !isFocused
-                ? Platform.OS === "ios"
-                  ? 25
-                  : 15
-                : Platform.OS === "ios"
-                ? 8
-                : 4,
-            },
-            !editable && { opacity: 0.3 },
-          ]}
-          onPress={setInputFocused}
-        />
-      )} */}
-      {/* <TextInput
-        ref={inputEl}
-        borderColor={borderColor}
-        style={[
-          common.input,
-          !placeholder && { paddingTop: 4 },
-          multiline && {
-            height: 160,
-            paddingTop: Platform.OS === "ios" ? 30 : 10,
-          },
-          error && touched && { borderColor: COLORS.RED },
-          !editable && { opacity: 0.3 },
-        ]}
-        value={value}
-        multiline={multiline}
-        onChangeText={(newVal) => onChange(type, newVal)}
-        secureTextEntry={secureTextEntry && hidePassword}
-        autoCapitalize={autoCapitalize}
-        clearButtonMode={clearButtonMode}
-        autoCorrect={autoCorrect}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        error={error}
-        touched={touched}
-        keyboardType={keyboardType}
-        editable={editable}
-      /> */}
-      <TextInput 
+      <TextInput
         label={label}
         ref={inputEl}
         mode={mode}
-        selectionColor={selectionColor}
         value={value}
         onChangeText={(newVal) => onChange(type, newVal)}
-        editable={editable}
         onFocus={handleFocus}
         onBlur={handleBlur}
         error={error}
@@ -159,35 +92,22 @@ const CustomInput = ({
         clearButtonMode={clearButtonMode}
         touched={touched}
         keyboardType={keyboardType}
-        secureTextEntry={secureTextEntry && hidePassword}
         autoCapitalize={autoCapitalize}
         activeOutlineColor={activeOutlineColor}
+        selectionColor={selectionColor}
         outlineColor={outlineColor}
-        
-        // theme={{
-        //   colors: {
-        //         background: 'transparent',
-        //      }
-        // }}
-        style={[ common.input ]}
-        // style={[
-        //   common.input,
-        //   multiline && {
-        //     height: 160,
-        //     paddingTop: Platform.OS === "ios" ? 30 : 10,
-        //   },
-        //   error && touched && { borderColor: COLORS.RED },
-        //   !editable && { opacity: 0.3 },
-        // ]}
-
+        disabled={disabled}
+        style={[ common.input, error && touched ? { borderColor: COLORS.RED} : null, multiline && { height: 160, textAlignVertical: "top"} ]}
+        theme={{ colors: {placeholder: theme}}}
+        numberOfLines={6} // Android: Sets the number of lines for a TextInput. Use it with multiline set to true to be able to fill the lines
       />
-      {error && touched && (
+      {error && touched ? (
         <CustomText
           text={error}
           color={COLORS.RED}
           styles={common.errorText}
         />
-      )}
+      ): null }
     </View>
   );
 };

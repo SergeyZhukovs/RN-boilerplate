@@ -4,10 +4,7 @@ import { COLORS } from "@constants";
 interface Style {
   container: ViewStyle;
   label: ViewStyle;
-  floatLabel: ViewStyle;
   icon: ViewStyle;
-  active: ViewStyle;
-  disabled: ViewStyle;
   checkbox: ViewStyle;
 }
 
@@ -17,23 +14,7 @@ export default StyleSheet.create<Style>({
     marginBottom: 15,
   },
   label: {
-    position: "absolute",
-    //top: -25,
-    zIndex: 1,
-    //marginBottom: 10,
-  },
-  floatLabel: {
-    position: "absolute",
-    zIndex: 1,
-    top: 6,
-    left: 25,
-  },
-  disabled: {
-    borderColor: COLORS.BLACK,
-    opacity: 0.3,
-  },
-  active: {
-    borderColor: COLORS.BLACK,
+     backgroundColor: COLORS.WHITE,
   },
   icon: {
     position: "absolute",

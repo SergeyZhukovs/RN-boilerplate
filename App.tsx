@@ -68,10 +68,8 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
               // onChange={(setFieldValue)}
               type={"email"}
               activeOutlineColor={COLORS.BLACK}
-              
-              //error={errors.email}
-              //  touched={touched.email}
-              //editable={false}
+              theme={COLORS.BLACK}
+              //disabled
               //multiline
             />
             <MainNavigator navigationRef={navigationRef} />

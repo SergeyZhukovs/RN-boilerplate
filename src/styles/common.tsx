@@ -62,9 +62,10 @@ export default StyleSheet.create<Style>({
     height: 50,
     width: 315,
     backgroundColor: COLORS.WHITE,
+    paddingHorizontal: 8,
     borderRadius: 5,
-    // borderWidth: 2,
     fontSize: SIZES.P,
+    color: COLORS.BLACK,
     fontFamily: FONTS.DUBAI_MEDIUM,
   },
   checkbox: {
