@@ -1,7 +1,12 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { navigationRef } from "./src/services/RootNav";
-import MainNavigator from "./src/navigation";
+import MainNavigator from "@navigation";
+import CustomButton from "@components/Global/CustomButton";
+import { COLORS, TEXTS } from "@constants";
+import { buttons } from "./src/styles";
+import CustomInput from "@components/Global/CustomInput";
+import { Provider as PaperProvider } from 'react-native-paper';
 
 export type Props = {
   name: string;
@@ -21,27 +26,56 @@ const Hello: React.FC<Props> = ({ name, baseEnthusiasmLevel = 0 }) => {
     numChars > 0 ? Array(numChars + 1).join("!") : "";
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.greeting}>
-        Hello {name}
-        {getExclamationMarks(enthusiasmLevel)}
-      </Text>
-      <View>
-        <Button
-          title="Increase enthusiasm"
-          accessibilityLabel="increment"
-          onPress={onIncrement}
-          color="blue"
-        />
-        <Button
-          title="Decrease enthusiasm"
-          accessibilityLabel="decrement"
-          onPress={onDecrement}
-          color="red"
-        />
-        <MainNavigator navigationRef={navigationRef} />
-      </View>
-    </View>
+    <PaperProvider>
+        <View style={styles.container}>
+          <Text style={styles.greeting}>
+            Hello {name}
+            {getExclamationMarks(enthusiasmLevel)}
+          </Text>
+          <View>
+            <Button
+              title="Increase enthusiasm"
+              accessibilityLabel="increment"
+              onPress={onIncrement}
+              color="blue"
+            />
+            <Button
+              title="Decrease enthusiasm"
+              accessibilityLabel="decrement"
+              onPress={onDecrement}
+              color="red"
+            />
+            <CustomButton
+              styles={buttons.primaryBtn}
+              text={TEXTS.BUTTONS.CREATE_ACC}
+              backgroundColor={COLORS.PINK}
+              textColor={COLORS.WHITE}
+              onPress={() => console.log("Clicked")}
+            />
+            <CustomButton
+              styles={buttons.secondaryBtn}
+              text={TEXTS.BUTTONS.CREATE_ACC}
+              backgroundColor={COLORS.TRANSPARENT}
+              textColor={COLORS.BLUE}
+              borderColor={COLORS.BLUE}
+              onPress={() => console.log("Clicked")}
+            />
+            <CustomInput
+              // value={values.email}
+              label={TEXTS.FLOATING_LABELS.EMAIL}
+              selectionColor={COLORS.BLACK}
+              outlineColor={COLORS.BLACK}
+              // onChange={(setFieldValue)}
+              type={"email"}
+              activeOutlineColor={COLORS.BLACK}
+              theme={COLORS.BLACK}
+              //disabled
+              //multiline
+            />
+            <MainNavigator navigationRef={navigationRef} />
+          </View>
+        </View>
+      </PaperProvider>
   );
 };
 

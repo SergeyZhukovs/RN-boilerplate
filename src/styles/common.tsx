@@ -5,7 +5,7 @@ import {
   ViewStyle,
   I18nManager,
 } from "react-native";
-import { COLORS } from "@constants";
+import { COLORS, FONTS, SIZES } from "@constants";
 interface Style {
   main: ViewStyle;
   button: ViewStyle;
@@ -38,11 +38,14 @@ export default StyleSheet.create<Style>({
     backgroundColor: COLORS.LIGHT_SILVER,
   },
   button: {
-    borderRadius: 5,
+    borderRadius: 15,
+    paddingHorizontal: 20,
+    paddingVertical: 14,
     alignItems: "center",
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
+    marginTop: 15,
   },
   boxShadow: {
     shadowColor: COLORS.SHADOW,
@@ -56,15 +59,14 @@ export default StyleSheet.create<Style>({
   },
   input: {
     position: "relative",
-    height: 60,
+    height: 50,
+    width: 315,
     backgroundColor: COLORS.WHITE,
-    borderRadius: 6,
-    borderColor: COLORS.INPUT_BORDER,
-    borderWidth: 1,
-    paddingHorizontal: 25,
-    paddingTop: 15,
-    fontSize: 16,
-    fontFamily: "Tajawal-Regular",
+    paddingHorizontal: 8,
+    borderRadius: 5,
+    fontSize: SIZES.P,
+    color: COLORS.BLACK,
+    fontFamily: FONTS.DUBAI_MEDIUM,
   },
   checkbox: {
     alignItems: 'center',
@@ -73,6 +75,7 @@ export default StyleSheet.create<Style>({
   errorText: {
     paddingTop: 10,
     flexBasis: "100%",
+    fontSize: SIZES.S1,
   },
   dropdownErrorText: {
     paddingTop: 0,

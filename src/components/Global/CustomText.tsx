@@ -8,13 +8,6 @@ interface TextProps {
   styles?: TextStyle;
   font?:
     | "DUBAI_MEDIUM"
-    | "DUBAI_BOLD"
-    | "DUBAI_REGULAR"
-    | "DUBAI_LIGHT"
-    | "TAJAWAL_BOLD"
-    | "TAJAWAL_LIGHT"
-    | "TAJAWAL_REGULAR"
-    | "TAJAWAL_MEDIUM"
     | string
     | undefined;
   color?: string;
@@ -35,31 +28,32 @@ const CustomText = ({
   size = "S",
   children,
   styles,
-  font = "TAJAWAL_REGULAR",
+  font = "DUBAI_MEDIUM",
   color,
   text,
     center,
   ...rest
-}: TextProps): JSX.Element => (
-  <RNText
-    {...rest}
-    style={[
-      {
-        fontSize: checkSize(size),
-        fontFamily: checkFonts(font),
-        color: color || COLORS.BLACK,
-        alignItems: 'center',
-        
-      },
-      center && {textAlign: 'center'},
-      styles,
-    ]}
-  >
-    {text}
-    <View style={{ width: '100%'}}>
-    {children}
-    </View>
-  </RNText>
-);
+}: TextProps): JSX.Element => {
+  return (
+      <RNText
+          {...rest}
+          style={[
+            {
+              fontSize: checkSize(size),
+              fontFamily: checkFonts(font),
+              color: color || COLORS.BLACK,
+              alignItems: 'center',
+            },
+            center && {textAlign: 'center'},
+            styles,
+          ]}
+      >
+        {text}
+        <View style={{ width: '100%'}}>
+          {children}
+        </View>
+      </RNText>
+  );
+}
 
 export default CustomText;

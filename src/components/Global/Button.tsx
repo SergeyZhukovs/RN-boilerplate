@@ -8,7 +8,7 @@ import {
 
 import CustomText from "./CustomText";
 import { common } from "@styles";
-import { COLORS } from "@constants/";
+import { COLORS } from "@constants";
 
 import IconRegular from "@components/Global/IconRegular";
 interface BtnProps {
@@ -28,16 +28,16 @@ interface BtnProps {
 const btnProp = {
   categoriesBtn: {
     size: "S",
-    font: "TAJAWAL_REGULAR",
+    font: "DUBAI_MEDIUM",
   },
   mainBtn: {
     size: "M",
-    font: "TAJAWAL_BOLD",
+    font: "DUBAI_MEDIUM",
   },
 
   clearBtn: {
     size: "M",
-    font: "TAJAWAL_BOLD",
+    font: "DUBAI_MEDIUM",
   },
 };
 
