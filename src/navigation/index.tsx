@@ -30,11 +30,15 @@ const MainNavigator = (): JSX.Element => {
           <Stack.Screen name="SplashScreen" component={_SplashScreen} />
         ) : token ? (
           <>
-            <Stack.Screen name="Home" component={TabNavigator} />
+            <Stack.Screen name="Homeo"
+              options={{
+                  headerShown: false
+              }}
+              component={TabNavigator} />
           </>
         ) : (
           <>
-            <Stack.Screen name="Home" options={{
+            <Stack.Screen name="Homes" options={{
                 headerShown: false
             }} component={TabNavigator} />
           </>

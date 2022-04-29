@@ -14,7 +14,24 @@ const TabNavigator = (): JSX.Element => {
 
   return (
     <Tab.Navigator>
-      <Tab.Screen name="TabHome" component={Header} />
+      <Tab.Screen name="Hem" options={{
+          // headerShown: false
+          tabBarIcon: ({ color }) => (<></>
+              // <Icon name="search" family="Ionicons" color={color} size={25} />
+          ),
+      }} component={Header} />
+        <Tab.Screen name="Sök" options={{
+            // headerShown: false
+            tabBarIcon: ({ color }) => (<></>
+                // <Icon name="search" family="Ionicons" color={color} size={25} />
+            ),
+        }} component={Header} />
+        <Tab.Screen name="Min kår" options={{
+            // headerShown: false
+            tabBarIcon: ({ color }) => (<></>
+                // <Icon name="search" family="Ionicons" color={color} size={25} />
+            ),
+        }} component={Header} />
     </Tab.Navigator>
   );
 };
