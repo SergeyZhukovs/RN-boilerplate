@@ -17,7 +17,7 @@ const HomeScreen = (): JSX.Element | null => {
   return (
     <ScrollView style={[common.main, common.mainBackground]}>
       <View>
-          <Text>Home View</Text>
+          <Text>Search</Text>
       </View>
     </ScrollView>
   );
