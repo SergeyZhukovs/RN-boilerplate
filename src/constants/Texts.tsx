@@ -59,7 +59,7 @@ export default {
     COMMON_QUESTIONS: "Vanliga frågor",
   },
 
-  PLACEHOLDERS: {
+  FLOATING_LABELS: {
     EMAIL: "E-postadress",
     PASSWORD: "Lösenord",
     REPEAT_PASS: "Upprepa lösenord",
@@ -75,14 +75,6 @@ export default {
     PHONE_NR: "Telefonnummer",
     GENDER: "Kön",
     SEARCH: "Sök..."
-  },
-
-  LABELS: {
-    ANONYMOUS_ACC: "Anonymt konto",
-    CHANGE_PASS: "Ändra lösenord",
-    ACC_INFO: "Kontouppgifter",
-    CLOSE_ACC: "Avsluta konto",
-    PRIVACY_POLICY: "Integritetspolicy",
   },
 
   POST_FEEDS: {
@@ -128,7 +120,13 @@ export default {
     SETTINGS: {
       HEADER: "Kontoinställningar",
       CLOSE_ACC_INFOTEXT: "Kort infotext om att medlemskapet avslutas automatiskt 31 dec, om medlemmen vill avsluta tidigare måste det ske i Umbraco och e-bas.",
-      CONTACT_INFO_TEXT: "Kort infotext om att man måste kontakta kåren för att ändra kontouppgifter."
+      CONTACT_INFO_TEXT: "Kort infotext om att man måste kontakta kåren för att ändra kontouppgifter.",
+      ANONYMOUS_ACC: "Anonymt konto",
+      CHANGE_PASS: "Ändra lösenord",
+      ACC_INFO: "Kontouppgifter",
+      CLOSE_ACC: "Avsluta konto",
+      PRIVACY_POLICY: "Integritetspolicy",
+  
     },
 
     MESSAGES: {

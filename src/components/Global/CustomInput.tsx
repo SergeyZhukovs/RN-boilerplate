@@ -1,21 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import {
-  TextInput,
   View,
-  Platform,
 } from "react-native";
-import { COLORS, FONTS } from "../../constants";
-import { common, input } from "../../styles";
+import { COLORS } from "@constants";
+import { common, input } from "@styles";
 import CustomText from "./CustomText";
+import { TextInput } from 'react-native-paper';
 
 interface Input {
   value?: string;
   label?: string;
-  color?: string;
-  borderColor?: string,
   onChange?: (x: string, y: string) => void;
-  placeholder?: string;
-  secureTextEntry?: boolean;
   autoCorrect?: boolean;
   autoCapitalize?: "none" | "sentences" | "words" | "characters";
   clearButtonMode?:
@@ -42,17 +37,19 @@ interface Input {
     | "twitter"
     | "web-search";
   multiline?: boolean;
-  editable?: boolean;
+  disabled?: boolean;
+  selectionColor?: string;
+  activeOutlineColor?: string | undefined;
+  mode?: 'flat' | 'outlined';
+  outlineColor?: string;
+  theme?: string;
 }
 
 const CustomInput = ({
   value,
   label,
   onChange,
-  placeholder,
-  color,
-  borderColor,
-  secureTextEntry = false,
+  selectionColor = COLORS.BLACK,
   autoCorrect = true,
   autoCapitalize = "none",
   clearButtonMode = "while-editing",
@@ -60,19 +57,18 @@ const CustomInput = ({
   error,
   touched,
   keyboardType,
-  editable = true,
+  disabled = false,
   multiline,
+  activeOutlineColor,
+  mode = "outlined",
+  outlineColor,
+  theme,
 }: Input): JSX.Element => {
   const [isFocused, setIsFocued] = useState(false);
-  const [hidePassword, setHidePassword] = useState(true);
   let inputEl = useRef(null);
 
-  const handleFocus = () => setIsFocued(true);
+  const handleFocus = () => setIsFocued(true);  
   const handleBlur = () => !value && setIsFocued(false);
-
-  const setInputFocused = () => inputEl?.current?.focus();
-
-  const changePwdType = () => setHidePassword(!hidePassword);
 
   useEffect(() => {
     if (value) {
@@ -82,70 +78,36 @@ const CustomInput = ({
 
   return (
     <View style={input.container}>
-      {!!label && (
-        <CustomText
-          text={label}
-          font={FONTS.DUBAI_MEDIUM}
-          size={"M"}
-          styles={[input.label, !editable && { opacity: 0.3 }]}
-        />
-      )}
-      {!!placeholder && (
-        <CustomText
-          text={placeholder}
-          font={!isFocused ? "DUBAI_MEDIUM" : "DUBAI_MEDIUM"}
-          size={!isFocused ? "M" : "S"}
-          color={color}
-          styles={[
-            input.floatLabel,
-            {
-              top: !isFocused
-                ? Platform.OS === "ios"
-                  ? 25
-                  : 15
-                : Platform.OS === "ios"
-                ? 8
-                : 4,
-            },
-            !editable && { opacity: 0.3 },
-          ]}
-          onPress={setInputFocused}
-        />
-      )}
       <TextInput
+        label={label}
         ref={inputEl}
-        borderColor={borderColor}
-        style={[
-          common.input,
-          !placeholder && { paddingTop: 4 },
-          multiline && {
-            height: 150,
-            paddingTop: Platform.OS === "ios" ? 30 : 10,
-          },
-          error && touched && { borderColor: COLORS.RED },
-          !editable && { opacity: 0.3 },
-        ]}
+        mode={mode}
         value={value}
-        multiline={multiline}
         onChangeText={(newVal) => onChange(type, newVal)}
-        secureTextEntry={secureTextEntry && hidePassword}
-        autoCapitalize={autoCapitalize}
-        clearButtonMode={clearButtonMode}
-        autoCorrect={autoCorrect}
         onFocus={handleFocus}
         onBlur={handleBlur}
         error={error}
+        multiline={multiline}
+        autoCorrect={autoCorrect}
+        clearButtonMode={clearButtonMode}
         touched={touched}
         keyboardType={keyboardType}
-        editable={editable}
+        autoCapitalize={autoCapitalize}
+        activeOutlineColor={activeOutlineColor}
+        selectionColor={selectionColor}
+        outlineColor={outlineColor}
+        disabled={disabled}
+        style={[ common.input, error && touched ? { borderColor: COLORS.RED} : null, multiline && { height: 160, textAlignVertical: "top"} ]}
+        theme={{ colors: {placeholder: theme}}}
+        numberOfLines={6} // Android: Sets the number of lines for a TextInput. Use it with multiline set to true to be able to fill the lines
       />
-      {error && touched && (
+      {error && touched ? (
         <CustomText
           text={error}
           color={COLORS.RED}
           styles={common.errorText}
         />
-      )}
+      ): null }
     </View>
   );
 };

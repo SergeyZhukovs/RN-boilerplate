@@ -1,11 +1,6 @@
 import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
-import { navigationRef } from "@services/RootNav";
 import MainNavigator from "@navigation";
-import { COLORS, TEXTS } from "@constants";
-import CustomInput from "@components/Global/CustomInput";
-import Header from "@components/Header";
 import { setupStore } from "@store/store";
 
 export type Props = {

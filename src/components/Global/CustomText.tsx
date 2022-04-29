@@ -8,13 +8,6 @@ interface TextProps {
   styles?: TextStyle;
   font?:
     | "DUBAI_MEDIUM"
-    | "DUBAI_BOLD"
-    | "DUBAI_REGULAR"
-    | "DUBAI_LIGHT"
-    | "TAJAWAL_BOLD"
-    | "TAJAWAL_LIGHT"
-    | "TAJAWAL_REGULAR"
-    | "TAJAWAL_MEDIUM"
     | string
     | undefined;
   color?: string;
@@ -50,7 +43,6 @@ const CustomText = ({
               fontFamily: checkFonts(font),
               color: color || COLORS.BLACK,
               alignItems: 'center',
-
             },
             center && {textAlign: 'center'},
             styles,
