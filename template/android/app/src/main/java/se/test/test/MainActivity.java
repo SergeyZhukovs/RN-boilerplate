@@ -1,4 +1,4 @@
-package com.sverigeselevkarerapp;
+package se.test.test;
 
 import android.os.Build;
 import android.os.Bundle;

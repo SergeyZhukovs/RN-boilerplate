@@ -15,6 +15,7 @@
 		96905EF65AED1B983A6B3ABC /* libPods-sverigeselevkarerapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-sverigeselevkarerapp.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		612AB56F1571471FA6178939 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114D2EDE540944DE9A277D5E /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		E91F37B29B4A4E50887F789B /* Dubai-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dubai-Medium.ttf"; path = "../src/assets/fonts/Dubai/Dubai-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-sverigeselevkarerapp/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		114D2EDE540944DE9A277D5E /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "sverigeselevkarerapp/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		216E9067F31446B09619C63C /* sverigeselevkarerapp-Bridging-Header.h */ = {isa = PBXFileReference; name = "sverigeselevkarerapp-Bridging-Header.h"; path = "sverigeselevkarerapp/sverigeselevkarerapp-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
+				114D2EDE540944DE9A277D5E /* noop-file.swift */,
+				216E9067F31446B09619C63C /* sverigeselevkarerapp-Bridging-Header.h */,
 			);
 			name = sverigeselevkarerapp;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 				2DEB58BC613A41B7B6BF2D57 /* Dubai-Medium.ttf in Resources */,
+				18637663D52A437A93A23030 /* sverigeselevkarerapp-Bridging-Header.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +306,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
+				612AB56F1571471FA6178939 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,11 +334,14 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.sverigeselevkarerapp;
-				PRODUCT_NAME = sverigeselevkarerapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.test.test";
+				PRODUCT_NAME = "sverigeselevkarerapp";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = sverigeselevkarerapp/sverigeselevkarerapp-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = sverigeselevkarerapp/sverigeselevkarerapp.entitlements;
 			};
 			name = Debug;
 		};
@@ -351,10 +361,13 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.name.sverigeselevkarerapp;
-				PRODUCT_NAME = sverigeselevkarerapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "se.test.test";
+				PRODUCT_NAME = "sverigeselevkarerapp";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				SWIFT_OBJC_BRIDGING_HEADER = sverigeselevkarerapp/sverigeselevkarerapp-Bridging-Header.h;
+				CODE_SIGN_ENTITLEMENTS = sverigeselevkarerapp/sverigeselevkarerapp.entitlements;
 			};
 			name = Release;
 		};
