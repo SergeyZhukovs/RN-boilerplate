@@ -53,3 +53,10 @@ buck-out/
 .expo/
 web-build/
 dist/
+
+#lock files
+ios/Podfile.lock
+ios/sverigeselevkarerapp.xcodeproj/project.pbxproj
+ios/sverigeselevkarerapp.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+package-lock.json
+yarn.lock
