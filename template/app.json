@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sveriges-elevkarer-app",
-    "slug": "sveriges-elevkarer-app",
+    "name": "RNBoilerplate",
+    "slug": "RNBoilerplate",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
@@ -13,7 +13,7 @@
       "bundleIdentifier": "se.test.test"
     }
   },
-  "name": "sveriges-elevkarer-app",
+  "name": "RNBoilerplate",
   "packagerOpts": {
     "config": "metro.config.js",
     "sourceExts": [
