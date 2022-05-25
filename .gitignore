@@ -54,14 +54,9 @@ buck-out/
 web-build/
 dist/
 
-<<<<<<< HEAD
 #lock files
 ios/Podfile.lock
 ios/sverigeselevkarerapp.xcodeproj/project.pbxproj
 ios/sverigeselevkarerapp.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
 package-lock.json
 yarn.lock
-=======
-package-lock.json
-yarn.lock
->>>>>>> dev
