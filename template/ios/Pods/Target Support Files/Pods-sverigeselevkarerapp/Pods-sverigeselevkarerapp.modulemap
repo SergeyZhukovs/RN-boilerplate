@@ -1,6 +1,0 @@
-module Pods_sverigeselevkarerapp {
-  umbrella header "Pods-sverigeselevkarerapp-umbrella.h"
-
-  export *
-  module * { export * }
-}
