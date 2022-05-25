@@ -2,7 +2,7 @@
   "name": "RNBoilerplate",
   "version": "0.0.1",
   "description": "React Native Template",
-  "repository": "git@github.com:SergeyZhukovs/RN-boilerplate.git",
+  "repository": "https://github.com/SergeyZhukovs/RN-boilerplate.git",
   "author": "Sergey",
   "license": "MIT"
 }
